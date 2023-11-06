@@ -1,24 +1,22 @@
-package OOPS_Concept;
+package Encapsulation.DataHiding;
 
 public class Employee {
-	int salary;
-	int age;
+
+	public String name;  // anywhere
+	private int eid;   //within a class
+	protected String dptname;  // with package and outside package with child class
+	String location; //default
 	
-	Employee(int salary, int age)
+	public int geteid() {
+		
+		return eid;
+	}
+	
+	public void seteid(int eid) {
+		this.eid = eid;
+	}
+	protected void display()
 	{
-		this.salary = salary;
-		this.age = age;
-	}
-	public void name() {
-		System.out.println("I am Niharika Shankar");
-	}
-	public int getSalary() {
-		return salary;
-	}
-	public int getage() {
-		return age;
-	}
-	public void dept() {
-		System.out.println("I am working in Developer dpt" );
+		System.out.println("inside protected mtd");
 	}
 }
