@@ -1,10 +1,8 @@
-package superDemo;
+package MultiLevelInheritance;
 
-public class Bike extends Car{
-	int maxSpeed = 120;
+public interface Bike {
 	
-	public void display() {
-		System.out.println("This is Bike Class method");
-		
+		void speedOfBike();
+		void mileageOfBike();
 	}
-}
+

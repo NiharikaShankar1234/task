@@ -1,11 +1,10 @@
-package SingleLevelInheritance;
-//parent Class
+package MultiLevelInheritance;
+
 public class Shape {
-	
-	String color;
-	// method 
-	public void printColor()
+	public void printcolour()
 	{
-		System.out.println("Shape Color is Red");
+	System.out.println("Green");
 	}
-}
+
+	}
+
