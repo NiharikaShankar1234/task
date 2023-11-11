@@ -1,26 +1,33 @@
-package Encapsulation.DataHiding;
+package com.Interfacedemo;
 
-public class Account {
-	private int  acno;
-	private	int ifsccode;
-			
-	protected String location ;
-	protected String address;
-	double amount;
- protected void info() {
-	 System.out.println("Protected method in other package");
- }
- public int getacno() {
-		return acno;
+public class Account implements Bank {
+
+	@Override
+	public void credit() {
+		// TODO Auto-generated method stub
+		int ca = 5000;
+		System.out.println("Rs "+ca+ " is credited to your Bank Account");
 	}
- public int getifsccode() {
-		return ifsccode;
+
+	@Override
+	public void debit() {
+		// TODO Auto-generated method stub
+		int da = 2000;
+		System.out.println("Rs "+ da+ " is Debited From your Bank Account");
+
 	}
-	//setter
-	public void setacno(int acno) {
-		this.acno = acno;
-	}
-	public void setifsccode(int ifsccode) {
-		this.ifsccode = ifsccode;
+	public static void main(String[] args) {
+        Account ac = new Account();
+        ac.credit();
+        ac.debit();
+        ac.loan();
+    }
+
+	@Override
+	public void loan() {
+		// TODO Auto-generated method stub
+		int lo = 100000;
+		System.out.println("Loan Amount of Rs "+ lo + "is credited to your Bank Account");
+
 	}
 }

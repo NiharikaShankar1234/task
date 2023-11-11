@@ -1,7 +1,11 @@
-package MultiLevelInheritance;
+package com.Couplinggift;
 
-public interface Car {
+public class Car implements Examination{
 
-		void speedOfCar();
-		void mileageOfCar();
+	@Override
+	public void gift() {
+		System.out.println("you won a car......");
+		
 	}
+
+}
