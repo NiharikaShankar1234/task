@@ -1,16 +1,35 @@
-package com.Interfacedemo;
+package com.cognizant.shapes;
 
-public class Circle implements Shape{
-
-	public void area() {
-		double r = 2.5;
-		double a1 = 3.14*r*r;
-		System.out.println("Area of circle = "+a1);
-		
+public class Circle {
+	private float radius;
+	float pi;
+	public Circle (){
+		System.out.println(" Default value Inside Constructor1 ");
+		//this.radius = radius;
 	}
-	public static void main (String[] args)
-	{
-		Circle c1 = new Circle();
-		c1.area();
-		}
+	
+	
+	public Circle (float radius, float pi){
+		System.out.println("Inside Constructor2 ");
+		this.setRadius(radius);
+		this.pi = pi;
+}
+
+
+	public float getRadius() {
+		return radius;
+	}
+
+
+	public void setRadius(float radius) {
+		this.radius = radius;
+	}
+	public float area() {
+		float area = (pi*getRadius()*getRadius());
+		return area;
+	}
+	public float circumference() {
+		float circum = (2*pi*getRadius());
+		return circum;
+	}
 }
